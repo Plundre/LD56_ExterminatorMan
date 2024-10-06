@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://pe11na6ohd6k"]
+
+[ext_resource type="Script" path="res://Creatures/Basecreature.cs" id="1_4jdja"]
+[ext_resource type="Texture2D" uid="uid://b1cn1yulfb5wu" path="res://placeholderSprites/bug.png" id="1_rsrl5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5sin"]
+size = Vector2(28, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jocpl"]
+size = Vector2(26, 21)
+
+[node name="Creature" type="RigidBody2D"]
+position = Vector2(0, -1)
+collision_layer = 2
+mass = 0.001
+gravity_scale = 0.0
+script = ExtResource("1_4jdja")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_r5sin")
+debug_color = Color(0.724958, 0.40889, 0.645352, 0.42)
+
+[node name="CreatureCollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_jocpl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 1.19209e-07)
+scale = Vector2(1.58333, 1.50505)
+texture = ExtResource("1_rsrl5")

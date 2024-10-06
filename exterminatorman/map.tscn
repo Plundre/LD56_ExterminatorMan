@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpjq5tcdyvdvl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgn1s"]
+size = Vector2(23.5625, 1060.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qujuk"]
+size = Vector2(1977.12, 20)
+
+[node name="Map" type="Node2D"]
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+
+[node name="LeftWallShape" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(-0.78125, 524.75)
+shape = SubResource("RectangleShape2D_jgn1s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(95, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(886, 1058)
+shape = SubResource("RectangleShape2D_qujuk")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(91, -1052)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(886, 1058)
+shape = SubResource("RectangleShape2D_qujuk")
+
+[node name="LeftWall2" type="StaticBody2D" parent="."]
+position = Vector2(1875, 3)
+
+[node name="LeftWallShape" type="CollisionShape2D" parent="LeftWall2"]
+position = Vector2(-0.78125, 524.75)
+shape = SubResource("RectangleShape2D_jgn1s")

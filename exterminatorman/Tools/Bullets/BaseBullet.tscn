@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://icfooi223f3w"]
+
+[ext_resource type="Script" path="res://Tools/Bullets/BaseBullet.cs" id="1_0o2lv"]
+[ext_resource type="Texture2D" uid="uid://bcmvogv03so5x" path="res://placeholderSprites/bullet.png" id="1_hftrb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uduwg"]
+radius = 11.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m7p71"]
+
+[node name="Bullet" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_0o2lv")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_uduwg")
+debug_color = Color(0.858071, 0.342882, 0.332816, 0.42)
+
+[node name="BulletCollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m7p71")
+
+[node name="BulletSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_hftrb")
