@@ -1,0 +1,155 @@
+[gd_scene load_steps=6 format=3 uid="uid://djbgcd82rxmea"]
+
+[ext_resource type="Script" path="res://MainMenu.cs" id="1_k8t3f"]
+[ext_resource type="Texture2D" uid="uid://btvvph5c6yfo6" path="res://placeholderSprites/tool.png" id="2_16y7w"]
+[ext_resource type="Texture2D" uid="uid://cby3j2vx2w827" path="res://placeholderSprites/New Piskel(2).png" id="3_0vkqw"]
+[ext_resource type="Texture2D" uid="uid://b1cn1yulfb5wu" path="res://placeholderSprites/bug.png" id="4_qcmxw"]
+[ext_resource type="Texture2D" uid="uid://tddqtkxqdpnw" path="res://placeholderSprites/Egg.png" id="5_s10gj"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_k8t3f")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.8918, 16.2595)
+size_flags_horizontal = 4
+color = Color(0.24184, 0.334048, 0.204948, 1)
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -331.0
+offset_top = -229.0
+offset_right = -190.0
+offset_bottom = -206.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.58146, 4.58146)
+text = "Exterminator Man"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 425.0
+offset_top = 360.0
+offset_right = 580.0
+offset_bottom = 383.0
+scale = Vector2(1.95256, 1.95256)
+text = "Press Enter to begin
+Escape to quit"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 277.0
+offset_top = 176.0
+offset_right = 317.0
+offset_bottom = 216.0
+rotation = 1.0993
+scale = Vector2(7.51269, 8.36339)
+texture = ExtResource("2_16y7w")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 332.0
+offset_top = 373.0
+offset_right = 396.0
+offset_bottom = 437.0
+rotation = 2.71698
+scale = Vector2(4.53217, 4.53217)
+texture = ExtResource("3_0vkqw")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 1061.0
+offset_top = 453.0
+offset_right = 1101.0
+offset_bottom = 493.0
+rotation = -2.61884
+scale = Vector2(4.35612, 4.35612)
+texture = ExtResource("4_qcmxw")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect3"]
+layout_mode = 0
+offset_left = -8.65977
+offset_top = -24.684
+offset_right = 31.3402
+offset_bottom = 15.316
+rotation = 0.456298
+texture = ExtResource("4_qcmxw")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect3"]
+offset_left = 19.826
+offset_top = -5.59553
+offset_right = 59.826
+offset_bottom = 34.4045
+rotation = -0.391982
+texture = ExtResource("4_qcmxw")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect3"]
+texture_filter = 1
+offset_left = 12.1104
+offset_top = -36.9174
+offset_right = 52.1104
+offset_bottom = 3.08264
+rotation = -5.20621
+scale = Vector2(0.792019, 0.792019)
+texture = ExtResource("4_qcmxw")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect3/TextureRect3"]
+layout_mode = 0
+offset_left = -8.65977
+offset_top = -24.684
+offset_right = 31.3402
+offset_bottom = 15.316
+rotation = 0.456298
+texture = ExtResource("4_qcmxw")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect3/TextureRect3"]
+offset_left = 19.826
+offset_top = -5.59553
+offset_right = 59.826
+offset_bottom = 34.4045
+rotation = -0.391982
+texture = ExtResource("4_qcmxw")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 1107.0
+offset_top = 222.0
+offset_right = 1171.0
+offset_bottom = 286.0
+rotation = 2.71698
+scale = Vector2(2.09821, 2.09821)
+texture = ExtResource("5_s10gj")
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect4"]
+texture_filter = 1
+offset_left = -30.7076
+offset_top = 87.587
+offset_right = 33.2924
+offset_bottom = 151.587
+rotation = 4.66764
+scale = Vector2(0.778813, 0.778813)
+texture = ExtResource("5_s10gj")
+
+[node name="TextureRect5" type="TextureRect" parent="TextureRect4"]
+texture_filter = 1
+offset_left = 44.6451
+offset_top = 56.2747
+offset_right = 108.645
+offset_bottom = 120.275
+rotation = 7.72055
+scale = Vector2(0.778813, 0.778813)
+texture = ExtResource("5_s10gj")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 27.0
+offset_top = 590.0
+offset_right = 217.0
+offset_bottom = 613.0
+text = "WASD, Mouse, Left Click "

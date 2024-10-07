@@ -22,7 +22,7 @@ public partial class CreatureSpawner : Node2D
 	}
 
 	void SpawnCreature(Vector2 pos){
-		GD.Print("Spawning Bullet");
+		//GD.Print("Spawning Creature");
 		var creature = creatureScene.Instantiate<RigidBody2D>();
 		AddChild(creature);
 		creature.Position = pos;

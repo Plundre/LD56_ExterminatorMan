@@ -1,15 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://8jo7ny0bnw8x"]
+[gd_scene load_steps=12 format=3 uid="uid://8jo7ny0bnw8x"]
 
 [ext_resource type="Texture2D" uid="uid://djp2ybibiou2b" path="res://placeholderSprites/background.png" id="1_eg8ev"]
+[ext_resource type="Script" path="res://Level.cs" id="1_th5eb"]
 [ext_resource type="PackedScene" uid="uid://cpeqx0jcaxgw" path="res://Player/Player.tscn" id="2_32n2n"]
 [ext_resource type="PackedScene" uid="uid://dpjq5tcdyvdvl" path="res://map.tscn" id="4_6rq1t"]
 [ext_resource type="PackedScene" uid="uid://ch5jf02wy6g5" path="res://bullet_spawner.tscn" id="6_6dkue"]
 [ext_resource type="Script" path="res://BulletSpawner.cs" id="6_xp3ov"]
 [ext_resource type="PackedScene" uid="uid://dr3otw4hggnkd" path="res://creature_spawner.tscn" id="7_u0vlu"]
 [ext_resource type="Script" path="res://CreatureSpawner.cs" id="8_cjm8p"]
+[ext_resource type="AudioStream" uid="uid://dwccc2bs15cvd" path="res://placeholderSprites/HLM1without the fade inout.mp3" id="9_xlxxj"]
+[ext_resource type="Script" path="res://UiScore.cs" id="10_til57"]
+[ext_resource type="Script" path="res://UiHealth.cs" id="11_aelxu"]
 
 [node name="Level" type="Node2D"]
 scale = Vector2(0.616106, 0.614497)
+script = ExtResource("1_th5eb")
 
 [node name="LevelBackground" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -18,7 +23,17 @@ scale = Vector2(5.92391, 3.35638)
 texture = ExtResource("1_eg8ev")
 
 [node name="CreatureSpawner" parent="." instance=ExtResource("7_u0vlu")]
-position = Vector2(938.15, 569.572)
+position = Vector2(1798.39, 78.1127)
+script = ExtResource("8_cjm8p")
+
+[node name="CreatureSpawner2" parent="." instance=ExtResource("7_u0vlu")]
+position = Vector2(66.547, 69.9759)
+rotation = 3.1226
+script = ExtResource("8_cjm8p")
+
+[node name="CreatureSpawner3" parent="." instance=ExtResource("7_u0vlu")]
+position = Vector2(1791.9, 995.937)
+rotation = -0.787833
 script = ExtResource("8_cjm8p")
 
 [node name="BulletSpawner" parent="." instance=ExtResource("6_6dkue")]
@@ -34,3 +49,35 @@ scale = Vector2(1, 1.01154)
 anchor_mode = 0
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_xlxxj")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UIScore" type="Container" parent="CanvasLayer"]
+offset_left = 22.0
+offset_top = 523.0
+offset_right = 62.0
+offset_bottom = 563.0
+script = ExtResource("10_til57")
+
+[node name="Score" type="Label" parent="CanvasLayer/UIScore"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Place: Holder"
+
+[node name="UIHealth" type="Container" parent="CanvasLayer"]
+offset_left = 26.0
+offset_top = 587.0
+offset_right = 66.0
+offset_bottom = 627.0
+script = ExtResource("11_aelxu")
+
+[node name="Health" type="Label" parent="CanvasLayer/UIHealth"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Place: Holder"

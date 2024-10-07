@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqqunmoplltkd"]
+
+[ext_resource type="Script" path="res://GameOver.cs" id="1_xs3dq"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_glldg"]
+script/source = "using Godot;
+using System;
+
+public partial class GameOverScoreLabel : Label
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_xs3dq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.9385, 16.3057)
+color = Color(0.361155, 0.55409, 0.362242, 1)
+
+[node name="Score" type="Label" parent="."]
+texture_filter = 1
+offset_left = 417.0
+offset_top = 199.0
+offset_right = 519.0
+offset_bottom = 222.0
+scale = Vector2(2.52564, 2.52564)
+text = "Place: Holder"
+script = SubResource("CSharpScript_glldg")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 306.0
+offset_top = 37.0
+offset_right = 393.0
+offset_bottom = 60.0
+scale = Vector2(6.11143, 6.11143)
+text = "Game Over"
+
+[node name="Label2" type="Label" parent="."]
+texture_filter = 1
+offset_left = 436.0
+offset_top = 292.0
+offset_right = 575.0
+offset_bottom = 341.0
+scale = Vector2(1.68488, 1.68488)
+text = "Back to Menu: Esc
+			Restart: Enter"

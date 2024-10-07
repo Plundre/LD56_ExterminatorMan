@@ -34,10 +34,11 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_df8cf")
 
 [node name="Tool" parent="." instance=ExtResource("3_pljsu")]
-position = Vector2(68, -94)
+position = Vector2(17.6089, -94)
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(-50.3911, 1)
 rotation = 1.5708
 scale = Vector2(2.53913, 3.20652)
 texture = ExtResource("3_42ahl")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwccc2bs15cvd"
+path="res://.godot/imported/HLM1without the fade inout.mp3-fba50abb57d57b4e4c37fbb2c4387414.mp3str"
+
+[deps]
+
+source_file="res://placeholderSprites/HLM1without the fade inout.mp3"
+dest_files=["res://.godot/imported/HLM1without the fade inout.mp3-fba50abb57d57b4e4c37fbb2c4387414.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

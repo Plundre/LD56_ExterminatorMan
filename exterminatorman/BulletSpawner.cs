@@ -18,6 +18,7 @@ public partial class BulletSpawner : Node2D
 	{
 		var tool = GetNode<Basetool>("/root/Level/Player/Tool");
 		tool.ToolFired += SpawnBullets;
+		
 
 	}
 
@@ -28,13 +29,16 @@ public partial class BulletSpawner : Node2D
 
 	public void SpawnBullets(Vector2 pos, Vector2 direction){
 		if(DateTime.Now-lastFired >= cooldown){
-			GD.Print("Spawning Bullet");
+			//GD.Print("Spawning Bullet");
 			var bullet = bulletScene.Instantiate<CharacterBody2D>();
 			AddChild(bullet);
 			bullet.GlobalPosition = pos;
-
 			bullet.Velocity = (direction + new Vector2((float)rnd.Next(-bulletSpreadRange,bulletSpreadRange)/100,(float)rnd.Next(-bulletSpreadRange,bulletSpreadRange)/100)).Normalized() * 500;
-			GD.Print("Fuck Shit: " + bullet.GlobalPosition);
+			if(!GetNode<AudioStreamPlayer>("SFX").Playing){
+				GetNode<AudioStreamPlayer>("SFX").Play(0);		
+			}
+			
+			//GD.Print("Fuck Shit: " + bullet.GlobalPosition);
 			lastFired = DateTime.Now;
 		}
 	}

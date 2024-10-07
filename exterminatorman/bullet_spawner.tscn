@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://ch5jf02wy6g5"]
+[gd_scene load_steps=2 format=3 uid="uid://ch5jf02wy6g5"]
+
+[ext_resource type="AudioStream" uid="uid://clj5ls35ktv2k" path="res://placeholderSprites/explosion.wav" id="1_0onju"]
 
 [node name="BulletSpawner" type="Node2D"]
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_0onju")
+volume_db = -25.0

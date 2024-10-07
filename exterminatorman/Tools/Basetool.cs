@@ -15,11 +15,7 @@ public partial class Basetool : Node2D
 	public override void _Process(double delta)
 	{
 		if(Input.IsMouseButtonPressed(MouseButton.Left)){
-			EmitSignal(SignalName.ToolFired, GlobalPosition, -this.GlobalTransform.Y);			
+			EmitSignal(SignalName.ToolFired, GlobalPosition, -this.GlobalTransform.Y);	
 		}
-
 	}
-
-
-
 }
