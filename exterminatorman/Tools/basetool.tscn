@@ -8,5 +8,6 @@ script = ExtResource("1_3rr4f")
 
 [node name="ToolSprite" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0, 90)
 scale = Vector2(4.64709, 5.59157)
 texture = ExtResource("1_io2u5")

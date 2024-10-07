@@ -13,11 +13,11 @@ collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_0o2lv")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="BulletHitbox" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BulletHitbox"]
 shape = SubResource("CircleShape2D_uduwg")
 debug_color = Color(0.858071, 0.342882, 0.332816, 0.42)
 

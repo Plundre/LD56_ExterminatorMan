@@ -8,6 +8,8 @@ public partial class Basecreature : RigidBody2D
 	Random rnd = new Random();
 	float creatureSpeed = 70;
 
+	public int Health = 100;
+
 	DateTime lastDirectionChange = DateTime.MinValue;
 	TimeSpan cooldown = TimeSpan.FromSeconds(0.2);
 
@@ -26,6 +28,10 @@ public partial class Basecreature : RigidBody2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		if(Health <= 0){
+			QueueFree();
+			return;
+		}
 		if(Input.IsKeyPressed(Key.L)){
 			LinearVelocity = Vector2.Down*100;
 		}else if(Input.IsKeyPressed(Key.O)){
@@ -43,10 +49,15 @@ public partial class Basecreature : RigidBody2D
 
 	}
 
+	public void TakeDamage(int damage){
+		GD.Print("Damage received (" + damage + ")");
+		Health -= damage;
+	}
 
 	void onBodyEnter(Node collidedBody){
 		GD.Print(this.Name + ": Colission detected");
 		GD.Print(this.Name + ": Collided with: " + collidedBody.Name);
+		GD.Print("Health: " + Health);
 	}
 
 }

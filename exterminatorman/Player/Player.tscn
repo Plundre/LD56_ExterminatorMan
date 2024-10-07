@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpeqx0jcaxgw"]
+[gd_scene load_steps=7 format=3 uid="uid://cpeqx0jcaxgw"]
 
 [ext_resource type="Script" path="res://Player/Player.cs" id="1_addvh"]
-[ext_resource type="Texture2D" uid="uid://bnr8umeprpmvr" path="res://placeholderSprites/MisterExt.png" id="2_l8pjw"]
+[ext_resource type="Texture2D" uid="uid://cby3j2vx2w827" path="res://placeholderSprites/New Piskel(2).png" id="3_42ahl"]
 [ext_resource type="PackedScene" uid="uid://dlb0f382gr4t8" path="res://Tools/basetool.tscn" id="3_pljsu"]
+[ext_resource type="Texture2D" uid="uid://dwb3d2u5englt" path="res://placeholderSprites/New Piskel(3).png" id="4_k4rol"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wmrfu"]
 radius = 71.0
@@ -33,9 +34,16 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_df8cf")
 
 [node name="Tool" parent="." instance=ExtResource("3_pljsu")]
-position = Vector2(105, 0)
+position = Vector2(68, -94)
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(4.12704, 3.97926)
-texture = ExtResource("2_l8pjw")
+rotation = 1.5708
+scale = Vector2(2.53913, 3.20652)
+texture = ExtResource("3_42ahl")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerSprite"]
+position = Vector2(3.93836, -4.3661)
+rotation = -1.45037
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("4_k4rol")
