@@ -1,4 +1,4 @@
-# LD56
+## A submission for Ludum Dare 56
 # You are the Exterminator Man!
 ### Pick up the flamethrower, and get rid of those PESKY tiny creatures!
 ### How long can you survive until they overrun you? :bug:
@@ -6,9 +6,9 @@
 
 Fairly happy with it as a first ever project using Godot! :grin: 
 
-I would've liked to add more enemies varieties, destroyable eggs/spawners, and more complex levels.
+We would've liked to add more enemies varieties, destroyable eggs/spawners, and more complex levels.
 
-But, alas, this is how far i got :grinning: 
+But, alas, this is how far we got :grinning: 
 
 
 
