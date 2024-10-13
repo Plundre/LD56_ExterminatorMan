@@ -6,7 +6,7 @@ public partial class BulletSpawner : Node2D
 {
 
 	DateTime lastFired = DateTime.MinValue;
-	TimeSpan cooldown = TimeSpan.FromSeconds(0.01);
+	TimeSpan cooldown = TimeSpan.FromSeconds(0.0075);
 	int bulletSpreadRange = 10;
 	Random rnd = new Random();
 	PackedScene bulletScene = GD.Load<PackedScene>("res://Tools/Bullets/BaseBullet.tscn");
