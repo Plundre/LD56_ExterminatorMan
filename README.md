@@ -19,6 +19,6 @@ Music, sounds, and art is also made by the team for this project
 Plundre: Software + art | Groennisse: Music + sound
 
 
-![MainMenu.png](///raw/453/03/z/66c7c.png)
-![GameImage.png](///raw/453/03/z/66ce6.png)
-![GameOverScreen.png](///raw/453/03/z/66cec.png)
+![MainMenu.png](/LDPageStuff/MainMenu.png)
+![GameImage.png](/LDPageStuff/GameImage.png)
+![GameOverScreen.png](/LDPageStuff/GameOverScreen.png)
